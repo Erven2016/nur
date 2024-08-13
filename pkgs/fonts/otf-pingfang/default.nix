@@ -1,9 +1,4 @@
-{
-  lib,
-  stdenvNoCC,
-  fetchFromGitHub,
-  ...
-}:
+{ stdenvNoCC, fetchFromGitHub, ... }:
 stdenvNoCC.mkDerivation {
   pname = "otf-pingfang";
   version = "20240813";
@@ -18,15 +13,8 @@ stdenvNoCC.mkDerivation {
   installPhase = ''
     runHook preInstall
 
-    install -Dm444 ./OTF/*.otf -t $out/share/fonts/truetype/PingFangSC
+    install -Dm644 ./OTF/*.otf -t $out/share/fonts/opentype/PingFangSC
 
     runHook postInstall
   '';
-
-  meta = with lib; {
-    description = "PingFang font from Apple, which support SC, TC and HK.";
-    license = [ licenses.gpl2 ];
-    platforms = platforms.all;
-    maintainers = [ maintainers.erven2016 ];
-  };
 }
