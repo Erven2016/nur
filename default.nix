@@ -20,5 +20,5 @@
 
   # Fonts
   otf-pingfang = pkgs.callPackage ./pkgs/fonts/otf-pingfang { };
-  # otf-sf-pro = pkgs.callPackage ./pkgs/fonts/otf-sf-pro { };
+  otf-sf-pro = pkgs.callPackage ./pkgs/fonts/otf-sf-pro { };
 }
