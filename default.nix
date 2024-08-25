@@ -6,7 +6,9 @@
 # commands such as:
 #     nix-build -A mypackage
 
-{ pkgs ? import <nixpkgs> { } }:
+{
+  pkgs ? import <nixpkgs> { },
+}:
 
 {
   # The `lib`, `modules`, and `overlays` names are special
@@ -14,11 +16,14 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  # example-package = pkgs.callPackage ./pkgs/example-package { };
-  # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
-  # ...
+  imports = [ ./pkgs/wallpaper ];
 
   # Fonts
   otf-pingfang = pkgs.callPackage ./pkgs/fonts/otf-pingfang { };
   otf-sf-pro = pkgs.callPackage ./pkgs/fonts/otf-sf-pro { };
+  "wallpaper-ventura" = pkgs.callPackage ./pkgs/wallpapers/build.nix {
+    name = "Ventura";
+    format = "png";
+    hash = "sha256-d1BtZZm5bRnPGMs3e9k/XpIEa4tGxuqOrg4SA//NQxg=";
+  };
 }
