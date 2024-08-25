@@ -10,13 +10,13 @@ let
   inherit name format hash;
 
   pname = "wallpaper-${name}";
-  version = "2024.08.00-01";
+  version = "2024.08.00-02";
 in
 stdenvNoCC.mkDerivation {
   inherit pname version;
   src = fetchzip {
     # url = "https://github.com/Erven2016/custom-gnome-wallpapers-for-nixos/raw/main/${name}.zip";
-    url = "https://github.com/Erven2016/custom-gnome-wallpapers-for-nixos/releases/download/${name}/${name}.zip";
+    url = "https://github.com/Erven2016/custom-gnome-wallpapers-for-nixos/releases/download/${name}/wallpaper.zip";
     hash = hash;
     stripRoot = false;
   };
