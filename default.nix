@@ -23,21 +23,4 @@ in
   # Fonts
   otf-pingfang = callPackage ./pkgs/fonts/otf-pingfang { };
   otf-sf-pro = callPackage ./pkgs/fonts/otf-sf-pro { };
-  customGnomeWallpaper = {
-    ventura = callPackage ./pkgs/wallpapers/build.nix {
-      name = "ventura";
-      format = "png";
-      hash = "sha256-sgR3O2NFHf+bycjt2+Qo+dLhO5mjWPxPoEiVu4r19aY=";
-    };
-    moon-far-view = callPackage ./pkgs/wallpapers/build.nix {
-      name = "moon-far-view";
-      format = "png";
-      hash = "sha256-PLqZ1BEP4kaWZfuM8R4sSBNu3Y8bRCWF6IIhEl3KT80=";
-    };
-    sonoma = callPackage ./pkgs/wallpapers/build.nix {
-      name = "sonoma";
-      format = "png";
-      hash = "sha256-k2+1kzKrWgPErHOF9GMbnA/8Tl/uQwLq+H9rorUb0sQ=";
-    };
-  };
 }
