@@ -9,8 +9,3 @@
 - Fonts
   - otf-pingfang
   - otf-sf-pro
-- Wallpapers
-  - customGnomeWallpaper -> [RawFiles](https://github.com/Erven2016/custom-gnome-wallpapers-for-nixos)
-    - sonoma
-    - moon-far-view
-    - ventura
