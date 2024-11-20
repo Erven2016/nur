@@ -2,5 +2,6 @@
 
 ## Packages
 
+- `clash2singbox`
 - fonts
-  - otf-pingfang
+  `otf-pingfang`

@@ -23,4 +23,6 @@ in
 
   fonts = import ./pkgs/fonts { };
 
+  clash2singbox = callPackage ./pkgs/programs/clash2singbox { };
+
 }
